@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.t1.test-automation'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation("io.rest-assured:rest-assured:${restAssuredVersion}")
+    testImplementation("io.qameta.allure:allure-rest-assured:${allureVersion}")
+    testImplementation("com.fasterxml.jackson.core:jackson-databind:${jacksonDatabindVersion}")
+}
+
+test {
+    useJUnitPlatform()
+}
